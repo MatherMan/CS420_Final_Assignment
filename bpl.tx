@@ -1,0 +1,45 @@
+Program:
+    'tip'
+    commands*=Command
+    'buzz'
+;
+
+Command:
+    Shot | Turnover | Assist | Rebound | Block | FreeThrow | Foul | Stats
+;
+
+Shot:
+    'shot(' result=['made', 'missed'] ', ' points=INT ')'
+;
+
+Turnover:
+    'turnover()'
+;
+
+Assist:
+    'assist()'
+;
+
+Rebound:
+    'rebound(' type=['offensive', 'defensive'] ')'
+;
+
+Block:
+    'block()'
+;
+
+FreeThrow:
+    'freethrow(' result=['made', 'missed'] ')'
+;
+
+Foul:
+    'foul()'
+;
+
+Stats:
+    'stats()'
+;
+
+INT:
+    /\d+/
+;
